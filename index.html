@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Chrono Web App</title>
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <div class="container-fluid fill app bg-light">
+        <div class="row">
+            <!-- Navbar -->
+            <nav class="navbar navbar-expand-lg navbar-light bg-light"> 
+                <div class="container-fluid">
+                  <a class="navbar-brand" href="#">Chrono Web App</a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Connexion</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Parties</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Alignements</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Suspensions</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Officiels</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Feuille de match</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Buts</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Punitions</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </nav>
+        </div>
+        <!-- Game information -->
+        <div class="row bg-dark text-white px-4">
+            <div class="row">
+                <div class="col">
+                    Endroit:
+                </div>
+                <div class="col">
+                    Date:
+                </div>
+                <div class="col">
+                    Catégorie:
+                </div>
+                <div class="col">
+                    # de Partie:
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    Ville:
+                </div>
+                <div class="col">
+                    Heure:
+                </div>
+                <div class="col">
+                    Section: 
+                </div>
+                <div class="col">
+                    Ligue:
+                </div>
+            </div>
+        </div>
+        <!-- Game information -->
+        <div class="row">
+            <!-- Score away -->
+            <div class="col-1 d-flex justify-content-center align-items-center">
+                <h1 class="fs-1 font-weight-bold">0</h1>
+            </div>
+            <!-- Goals and pens away -->
+            <div class="col mx-2">
+                <h1 class="text-center">Away</h1>
+                <div class="row">
+                    <button type="button" class="btn btn-dark">+ Ajouter un but</button>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                            <th scope="col">B</th>
+                            <th scope="col">A</th>
+                            <th scope="col">A</th>
+                            <th scope="col">Temps</th>
+                            <th scope="col">Pér</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>2</td>
+                                <td>3</td>
+                                <td>12:43</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>2</td>
+                                <td>3</td>
+                                <td>12:43</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>2</td>
+                                <td>3</td>
+                                <td>12:43</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>2</td>
+                                <td>3</td>
+                                <td>12:43</td>
+                                <td>1</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="row">
+                    <button type="button" class="btn btn-dark">+ Ajouter une punition</button>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                              <th scope="col">No</th>
+                              <th scope="col">Code</th>
+                              <th scope="col">Temps</th>
+                              <th scope="col">Pér</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>A44</td>
+                                <td>12:43</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>A44</td>
+                                <td>12:43</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>A44</td>
+                                <td>12:43</td>
+                                <td>1</td>
+                            </tr>
+                          </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- Lineup away -->
+            <div class="col-3">
+                <h1 class="text-center">Équipe 1</h1>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                          <th scope="col">No</th>
+                          <th scope="col">Nom</th>
+                          <th scope="col">Rôle</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Mark Otto</td>
+                            <td>Goaler</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">2</th>
+                            <td>Jacob Thornton</td>
+                            <td>Joueur</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">3</th>
+                            <td>Larry Bird</td>
+                            <td>Joueur</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">4</th>
+                            <td>Mark Otto</td>
+                            <td>Joueur</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">5</th>
+                            <td>Jacob Thornton</td>
+                            <td>Joueur</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">6</th>
+                            <td>Larry Bird</td>
+                            <td>Joueur</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">7</th>
+                            <td>Mark Otto</td>
+                            <td>Goaler</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">8</th>
+                            <td>Jacob Thornton</td>
+                            <td>Joueur</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">9</th>
+                            <td>Larry Bird</td>
+                            <td>Joueur</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">10</th>
+                            <td>Mark Otto</td>
+                            <td>Joueur</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">11</th>
+                            <td>Jacob Thornton</td>
+                            <td>Joueur</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">12</th>
+                            <td>Larry Bird</td>
+                            <td>Joueur</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">13</th>
+                            <td>Mark Otto</td>
+                            <td>Joueur</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">14</th>
+                            <td>Jacob Thornton</td>
+                            <td>Joueur</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">15</th>
+                            <td>Larry Bird</td>
+                            <td>Joueur</td>
+                          </tr>
+                      </tbody>
+                </table>
+            </div>
+            <!-- Lineup home -->
+            <div class="col-3">
+                <h1 class="text-center">Équipe 2</h1>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                          <th scope="col">No</th>
+                          <th scope="col">Nom</th>
+                          <th scope="col">Rôle</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Mark Otto</td>
+                                <td>Goaler</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">2</th>
+                                <td>Jacob Thornton</td>
+                                <td>Joueur</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">3</th>
+                                <td>Larry Bird</td>
+                                <td>Joueur</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">4</th>
+                                <td>Mark Otto</td>
+                                <td>Joueur</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">5</th>
+                                <td>Jacob Thornton</td>
+                                <td>Joueur</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">6</th>
+                                <td>Larry Bird</td>
+                                <td>Joueur</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">7</th>
+                                <td>Mark Otto</td>
+                                <td>Goaler</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">8</th>
+                                <td>Jacob Thornton</td>
+                                <td>Joueur</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">9</th>
+                                <td>Larry Bird</td>
+                                <td>Joueur</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">10</th>
+                                <td>Mark Otto</td>
+                                <td>Joueur</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">11</th>
+                                <td>Jacob Thornton</td>
+                                <td>Joueur</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">12</th>
+                                <td>Larry Bird</td>
+                                <td>Joueur</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">13</th>
+                                <td>Mark Otto</td>
+                                <td>Joueur</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">14</th>
+                                <td>Jacob Thornton</td>
+                                <td>Joueur</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">15</th>
+                                <td>Larry Bird</td>
+                                <td>Joueur</td>
+                              </tr>
+                          </tbody>
+                      </tbody>
+                </table>
+            </div>
+            <!-- Goals and pens home -->
+            <div class="col mx-2">
+                <h1 class="text-center">Home</h1>
+                <div class="row">
+                    <button type="button" class="btn btn-dark">+ Ajouter un but</button>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                              <th scope="col">B</th>
+                              <th scope="col">A</th>
+                              <th scope="col">A</th>
+                              <th scope="col">Temps</th>
+                              <th scope="col">Pér</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>2</td>
+                                    <td>3</td>
+                                    <td>12:43</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>2</td>
+                                    <td>3</td>
+                                    <td>12:43</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>2</td>
+                                    <td>3</td>
+                                    <td>12:43</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>2</td>
+                                    <td>3</td>
+                                    <td>12:43</td>
+                                    <td>1</td>
+                                </tr>
+                              </tbody>
+                          </tbody>
+                    </table>
+                </div>
+                <div class="row">
+                    <button type="button" class="btn btn-dark">+ Ajouter une punition</button>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                              <th scope="col">No</th>
+                              <th scope="col">Code</th>
+                              <th scope="col">Temps</th>
+                              <th scope="col">Pér</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>A44</td>
+                                <td>12:43</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>A44</td>
+                                <td>12:43</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>A44</td>
+                                <td>12:43</td>
+                                <td>1</td>
+                            </tr>
+                          </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- Score home -->
+            <div class="col-1 d-flex justify-content-center align-items-center">
+                <h1 class="fs-1 font-weight-bold">0</h1>
+            </div>
+        </div>
+        <!-- Game personel -->
+        <div class="row bg-dark text-white px-4">
+            <div class="row">
+                <div class="col">
+                    Marqueur 1:
+                </div>
+                <div class="col">
+                    Juge de ligne 1:
+                </div>
+                <div class="col">
+                    Arbitre en chef 1:
+                </div>
+                <div class="col">
+                    Status:
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    Marqueur 2:
+                </div>
+                <div class="col">
+                    Juge de ligne 2:
+                </div>
+                <div class="col">
+                    Arbitre en chef 2: 
+                </div>
+                <div class="col"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
