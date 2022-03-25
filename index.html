@@ -12,7 +12,7 @@
   <body>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <!-- Header-->
-    <div class="sticky-top ">
+    <div class="sticky-top">
     <!-- <div> -->
       <!-- Navbar -->
       <div class="row">
@@ -25,36 +25,22 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                  <a class="nav-link" aria-current="page" href="#">Connexion</a>
+                  <a class="nav-link" data-bs-toggle="modal" data-bs-target="#loginModal" aria-current="page" href="#">Connexion</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="#">Parties</a>
-                </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Dropdown
-                  </a>
-                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li><hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                  </ul>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="">Alignements</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="">Supspensions</a>
+                  <a class="nav-link" href="">Suspensions</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="" tabindex="-1">Officiels</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="" tabindex="-1">Feuille de matchs</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="" tabindex="-1">Buts</a>
+                  <a class="nav-link" href="" data-bs-toggle="modal" data-bs-target="#goalModal" tabindex="-1">Buts</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="" data-bs-toggle="modal" data-bs-target="#punModal">Punitions</a>
@@ -68,7 +54,7 @@
       <div class="row">
           <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
-              <a class="navbar-brand" href="#">Information de la partie</a>
+              <a class="navbar-brand" href="#"><b>Information de la partie</b></a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#gameInfoCollapse" aria-controls="gameInfoCollapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
@@ -106,7 +92,7 @@
     </div>
 
     <!-- Game sheet -->
-    <div class="container-fluid mb-5 bg-light">
+    <div class="container-fluid pt-2 bg-light">
         <div class="row">
           <!-- Away team -->
           <div class="col-lg-6 col-md-12 col-sm-12">
@@ -138,7 +124,10 @@
                               <td>3</td>
                               <td>12:43</td>
                               <td>1</td>
-                              <td><i class="bi bi-pencil mx-1"></i><i class="bi text-danger bi-trash3-fill mx-1"></i></td>
+                              <td>
+                                <i data-bs-toggle="modal" data-bs-target="#goalModal" class="bi bi-pencil cursor-pointer mx-1"></i>
+                                <i data-bs-toggle="modal" data-bs-target="#deleteGoalModal" class="bi text-danger cursor-pointer bi-trash3-fill mx-1"></i>
+                              </td>
                             </tr>
                           <tr>
                               <td>1</td>
@@ -146,7 +135,10 @@
                               <td>3</td>
                               <td>12:43</td>
                               <td>1</td>
-                              <td><i class="bi bi-pencil mx-1"></i><i class="bi text-danger bi-trash3-fill mx-1"></i></td>
+                              <td>
+                                <i data-bs-toggle="modal" data-bs-target="#goalModal" class="bi bi-pencil cursor-pointer mx-1"></i>
+                                <i data-bs-toggle="modal" data-bs-target="#deleteGoalModal" class="bi text-danger cursor-pointer bi-trash3-fill mx-1"></i>
+                              </td>
                             </tr>
                           <tr>
                               <td>1</td>
@@ -154,7 +146,10 @@
                               <td>3</td>
                               <td>12:43</td>
                               <td>1</td>
-                              <td><i class="bi bi-pencil mx-1"></i><i class="bi text-danger bi-trash3-fill mx-1"></i></td>
+                              <td>
+                                <i data-bs-toggle="modal" data-bs-target="#goalModal" class="bi bi-pencil cursor-pointer mx-1"></i>
+                                <i data-bs-toggle="modal" data-bs-target="#deleteGoalModal" class="bi text-danger cursor-pointer bi-trash3-fill mx-1"></i>
+                              </td>
                             </tr>
                           <tr>
                               <td>1</td>
@@ -162,7 +157,10 @@
                               <td>3</td>
                               <td>12:43</td>
                               <td>1</td>
-                              <td><i class="bi bi-pencil mx-1"></i><i class="bi text-danger bi-trash3-fill mx-1"></i></td>
+                              <td>
+                                <i data-bs-toggle="modal" data-bs-target="#goalModal" class="bi bi-pencil cursor-pointer mx-1"></i>
+                                <i data-bs-toggle="modal" data-bs-target="#deleteGoalModal" class="bi text-danger cursor-pointer bi-trash3-fill mx-1"></i>
+                              </td>
                             </tr>
                       </tbody>
                     </table>
@@ -188,21 +186,30 @@
                               <td>A44</td>
                               <td>12:43</td>
                               <td>1</td>
-                              <td><i class="bi bi-pencil mx-1"></i><i class="bi text-danger bi-trash3-fill mx-1"></i></td>
+                              <td>
+                                <i data-bs-toggle="modal" data-bs-target="#punModal" class="bi bi-pencil cursor-pointer mx-1"></i>
+                                <i data-bs-toggle="modal" data-bs-target="#deletePunModal" class="bi text-danger cursor-pointer bi-trash3-fill mx-1"></i>
+                              </td>
                             </tr>
                           <tr>
                               <td>1</td>
                               <td>A44</td>
                               <td>12:43</td>
                               <td>1</td>
-                              <td><i class="bi bi-pencil mx-1"></i><i class="bi text-danger bi-trash3-fill mx-1"></i></td>
+                              <td>
+                                <i data-bs-toggle="modal" data-bs-target="#punModal" class="bi bi-pencil cursor-pointer mx-1"></i>
+                                <i data-bs-toggle="modal" data-bs-target="#deletePunModal" class="bi text-danger cursor-pointer bi-trash3-fill mx-1"></i>
+                              </td>
                             </tr>
                           <tr>
                               <td>1</td>
                               <td>A44</td>
                               <td>12:43</td>
                               <td>1</td>
-                              <td><i class="bi bi-pencil mx-1"></i><i class="bi text-danger bi-trash3-fill mx-1"></i></td>
+                              <td>
+                                <i data-bs-toggle="modal" data-bs-target="#punModal" class="bi bi-pencil cursor-pointer mx-1"></i>
+                                <i data-bs-toggle="modal" data-bs-target="#deletePunModal" class="bi text-danger cursor-pointer bi-trash3-fill mx-1"></i>
+                              </td>
                             </tr>
                         </tbody>
                   </table>
@@ -473,7 +480,10 @@
                               <td>3</td>
                               <td>12:43</td>
                               <td>1</td>
-                              <td><i class="bi bi-pencil mx-1"></i><i class="bi text-danger bi-trash3-fill mx-1"></i></td>
+                              <td>
+                                <i data-bs-toggle="modal" data-bs-target="#goalModal" class="bi bi-pencil cursor-pointer mx-1"></i>
+                                <i data-bs-toggle="modal" data-bs-target="#deleteGoalModal" class="bi text-danger cursor-pointer bi-trash3-fill mx-1"></i>
+                              </td>
                             </tr>
                           <tr>
                               <td>1</td>
@@ -481,7 +491,10 @@
                               <td>3</td>
                               <td>12:43</td>
                               <td>1</td>
-                              <td><i class="bi bi-pencil mx-1"></i><i class="bi text-danger bi-trash3-fill mx-1"></i></td>
+                              <td>
+                                <i data-bs-toggle="modal" data-bs-target="#goalModal" class="bi bi-pencil cursor-pointer mx-1"></i>
+                                <i data-bs-toggle="modal" data-bs-target="#deleteGoalModal" class="bi text-danger cursor-pointer bi-trash3-fill mx-1"></i>
+                              </td>
                             </tr>
                           <tr>
                               <td>1</td>
@@ -489,7 +502,10 @@
                               <td>3</td>
                               <td>12:43</td>
                               <td>1</td>
-                              <td><i class="bi bi-pencil mx-1"></i><i class="bi text-danger bi-trash3-fill mx-1"></i></td>
+                              <td>
+                                <i data-bs-toggle="modal" data-bs-target="#goalModal" class="bi bi-pencil cursor-pointer mx-1"></i>
+                                <i data-bs-toggle="modal" data-bs-target="#deleteGoalModal" class="bi text-danger cursor-pointer bi-trash3-fill mx-1"></i>
+                              </td>
                             </tr>
                           <tr>
                               <td>1</td>
@@ -497,7 +513,10 @@
                               <td>3</td>
                               <td>12:43</td>
                               <td>1</td>
-                              <td><i class="bi bi-pencil mx-1"></i><i class="bi text-danger bi-trash3-fill mx-1"></i></td>
+                              <td>
+                                <i data-bs-toggle="modal" data-bs-target="#goalModal" class="bi bi-pencil cursor-pointer mx-1"></i>
+                                <i data-bs-toggle="modal" data-bs-target="#deleteGoalModal" class="bi text-danger cursor-pointer bi-trash3-fill mx-1"></i>
+                              </td>
                           </tr>
                       </tbody>
                     </table>
@@ -523,21 +542,30 @@
                               <td>A44</td>
                               <td>12:43</td>
                               <td>1</td>
-                              <td><i class="bi bi-pencil mx-1"></i><i class="bi text-danger bi-trash3-fill mx-1"></i></td>
+                              <td>
+                                <i data-bs-toggle="modal" data-bs-target="#punModal" class="bi bi-pencil cursor-pointer mx-1"></i>
+                                <i data-bs-toggle="modal" data-bs-target="#deletePunModal" class="bi text-danger cursor-pointer bi-trash3-fill mx-1"></i>
+                              </td>
                           </tr>
                           <tr>
                               <td>1</td>
                               <td>A44</td>
                               <td>12:43</td>
                               <td>1</td>
-                              <td><i class="bi bi-pencil mx-1"></i><i class="bi text-danger bi-trash3-fill mx-1"></i></td>
+                              <td>
+                                <i data-bs-toggle="modal" data-bs-target="#punModal" class="bi bi-pencil cursor-pointer mx-1"></i>
+                                <i data-bs-toggle="modal" data-bs-target="#deletePunModal" class="bi text-danger cursor-pointer bi-trash3-fill mx-1"></i>
+                              </td>
                           </tr>
                           <tr>
                               <td>1</td>
                               <td>A44</td>
                               <td>12:43</td>
                               <td>1</td>
-                              <td><i class="bi bi-pencil mx-1"></i><i class="bi text-danger bi-trash3-fill mx-1"></i></td>
+                              <td>
+                                <i data-bs-toggle="modal" data-bs-target="#punModal" class="bi bi-pencil cursor-pointer mx-1"></i>
+                                <i data-bs-toggle="modal" data-bs-target="#deletePunModal" class="bi text-danger cursor-pointer bi-trash3-fill mx-1"></i>
+                              </td>
                           </tr>
                         </tbody>
                   </table>
@@ -549,6 +577,126 @@
     </div>
 
     <!-- Modals-->
+    
+    <!-- Modal login -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Connexion</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <select class="form-select">
+                  <option selected>Sélectionnez un site</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label for="username" class="form-label">Nom d'utilisateur</label>
+                <input class="form-control" id="username">
+              </div>
+              <div class="mb-3">
+                <label for="password" class="form-label">Mot de passe</label>
+                <input type="password" class="form-control" id="password">
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+            <button type="button" class="btn btn-success">S'enregistrer</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal goal -->
+    <div class="modal fade" id="goalModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Ajouter un but</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <select class="form-select">
+                  <option selected>Marqueur</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <select class="form-select">
+                  <option selected>Assistance 1</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <select class="form-select">
+                  <option selected>Assistance 2</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="punPeriode" id="per1" value="1">
+                  <label class="form-check-label" for="per1">1</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="punPeriode" id="per2" value="2">
+                  <label class="form-check-label" for="per2">2</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="punPeriode" id="per3" value="3">
+                  <label class="form-check-label" for="per3">3</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="punPeriode" id="per4" value="4">
+                  <label class="form-check-label" for="per4">4 (supp)</label>
+                </div>
+                <div class="form-check form-check-inline mb-3">
+                  <input class="form-check-input" type="radio" name="punPeriode" id="per5" value="5">
+                  <label class="form-check-label" for="per5">5 (supp)</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  Temps <br>(au chrono): 
+                </div>
+                <select class="form-select col mx-3">
+                  <option selected>Min</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                </select>
+                <select class="form-select col mx-3">
+                  <option selected>Sec</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                </select>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+            <button type="button" class="btn btn-success">Confirmer</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- Modal punition -->
     <div class="modal fade" id="punModal" tabindex="-1" aria-hidden="true">
       <div class="modal-dialog">
@@ -558,7 +706,86 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
           </div>
           <div class="modal-body">
-            Content
+            <form>
+              <div class="mb-3">
+                <select class="form-select">
+                  <option selected>Choisir un joueur</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="punPeriode" id="per1" value="1">
+                  <label class="form-check-label" for="per1">1</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="punPeriode" id="per2" value="2">
+                  <label class="form-check-label" for="per2">2</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="punPeriode" id="per3" value="3">
+                  <label class="form-check-label" for="per3">3</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="punPeriode" id="per4" value="4">
+                  <label class="form-check-label" for="per4">4 (supp)</label>
+                </div>
+                <div class="form-check form-check-inline mb-3">
+                  <input class="form-check-input" type="radio" name="punPeriode" id="per5" value="5">
+                  <label class="form-check-label" for="per5">5 (supp)</label>
+                </div>
+              </div>
+              <div class="mb-3">
+                <select class="form-select" aria-label="Choisir un joueur">
+                  <option selected>Choisir un code</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                </select>
+              </div>
+              <div class="form-check mb-3">
+                <input class="form-check-input" type="checkbox" id="teamPen">
+                <label class="form-check-label" for="teamPen">
+                  Punition d'équipe
+                </label>
+              </div>
+              <div class="row">
+                <div class="col">
+                  Temps <br>(au chrono): 
+                </div>
+                <select class="form-select col mx-3">
+                  <option selected>Min</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                  <option value="11">11</option>
+                  <option value="12">12</option>
+                  <option value="13">13</option>
+                  <option value="14">14</option>
+                  <option value="15">15</option>
+                  <option value="16">16</option>
+                  <option value="17">17</option>
+                  <option value="18">18</option>
+                  <option value="19">19</option>
+                  <option value="20">20</option>
+                </select>
+                <select class="form-select col mx-3">
+                  <option selected>Sec</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                </select>
+              </div>
+            </form>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
@@ -567,13 +794,14 @@
         </div>
       </div>
     </div>
+
     <!-- Game personel / Footer -->
-    <footer class="fixed-bottom bg-dark text-white">
+    <footer class="sticky-bottom bg-dark text-white">
     <!-- <footer class="mt-auto bg-dark text-white px-4"> -->
       <div class="row">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
           <div class="container-fluid">
-            <a class="navbar-brand" href="#">Officiels</a>
+            <a class="navbar-brand" href="#"><b>Officiels</b></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#gameOfficialsCollapse" aria-controls="gameOfficialsCollapse" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
