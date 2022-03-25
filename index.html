@@ -66,33 +66,7 @@
       </div>
       <!-- Game information -->
       <div class="row">
-          <!-- <div class="row">
-              <div class="col">
-                  Endroit: Sabourin
-              </div>
-              <div class="col">
-                  Date: 29/02/2022
-              </div>
-              <div class="col">
-                  Catégorie: Junior A
-              </div>
-              <div class="col">
-                  # de Partie: 12345
-              </div>
-              <div class="col">
-                  Ville: Hull
-              </div>
-              <div class="col">
-                  Heure: 20h00
-              </div>
-              <div class="col">
-                  Section: Ouest
-              </div>
-              <div class="col">
-                  Ligue: LHRO
-              </div>
-          </div> -->
-          <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+          <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
               <a class="navbar-brand" href="#">Information de la partie</a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#gameInfoCollapse" aria-controls="gameInfoCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -132,7 +106,7 @@
     </div>
 
     <!-- Game sheet -->
-    <div class="container-fluid mb-4 bg-light">
+    <div class="container-fluid mb-5 bg-light">
         <div class="row">
           <!-- Away team -->
           <div class="col-lg-6 col-md-12 col-sm-12">
@@ -333,6 +307,24 @@
                                   </tr>
                                   <tr>
                                     <th scope="row">15</th>
+                                    <td>Larry Bird</td>
+                                    <td>Joueur</td>
+                                    <td><input type="checkbox"></td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">16</th>
+                                    <td>Larry Bird</td>
+                                    <td>Joueur</td>
+                                    <td><input type="checkbox"></td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">17</th>
+                                    <td>Larry Bird</td>
+                                    <td>Joueur</td>
+                                    <td><input type="checkbox"></td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">18</th>
                                     <td>Larry Bird</td>
                                     <td>Joueur</td>
                                     <td><input type="checkbox"></td>
@@ -576,34 +568,43 @@
       </div>
     </div>
     <!-- Game personel / Footer -->
-    <footer class="sticky-bottom mt-auto bg-dark text-white px-4">
+    <footer class="fixed-bottom bg-dark text-white">
     <!-- <footer class="mt-auto bg-dark text-white px-4"> -->
       <div class="row">
-          <div class="col">
-              Marqueur 1: Sébastien Coll
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">Officiels</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#gameOfficialsCollapse" aria-controls="gameOfficialsCollapse" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="gameOfficialsCollapse">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link active">Marqueur 1: Sébastien Coll</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active">Marqueur 2: Sébastien Coll</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active">Arbitre en chef 1: Sébastien Coll</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active">Arbitre en chef 2: Sébastien Coll</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active">Juge de ligne 1: Sébastien Coll</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active">Juge de ligne 2: Sébastien Coll</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active">Status: En cours</a>
+                </li>
+              </ul>
+            </div>
           </div>
-          <div class="col">
-              Juge de ligne 1: Sébastien Coll
-          </div>
-          <div class="col">
-              Arbitre en chef 1: Sébastien Coll
-          </div>
-          <div class="col">
-              Status: En cours
-          </div>
-      </div>
-      <div class="row">
-          <div class="col">
-              Marqueur 2: Sébastien Coll
-          </div>
-          <div class="col">
-              Juge de ligne 2: Sébastien Coll
-          </div>
-          <div class="col">
-              Arbitre en chef 2: Sébastien Coll
-          </div>
-          <div class="col"></div>
-      </div>
+        </nav>
+    </div>
     </footer>
   </body>
 </html>
